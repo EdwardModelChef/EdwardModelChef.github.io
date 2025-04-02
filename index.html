@@ -7,10 +7,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding-top: 70px;
+        }
+        .profile-container {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .profile-image img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border: 5px solid #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin-right: 15px;
+            font-size: 1.3rem;
+            color: #0d6efd;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .section-divider {
+            margin: 40px 0;
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
         <div class="container">
             <a class="navbar-brand" href="#">Edward Hong Wang</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -22,13 +57,10 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#research">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#research">Research</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#publications">Publications</a>
+                        <a class="nav-link" href="#company">Company</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -39,64 +71,113 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="py-5">
-        <div class="container">
+    <section id="home" class="py-4">
+        <div class="container profile-container">
             <div class="row align-items-center">
-                <div class="col-md-4">
+                <div class="col-md-4 text-center">
                     <div class="profile-image">
                         <img src="images/profile.jpg" alt="Edward Hong Wang" class="img-fluid rounded-circle">
                     </div>
-                </div>
-                <div class="col-md-8">
-                    <h1>Edward Hong Wang</h1>
-                    <h3>Researcher & Developer</h3>
-                    <p class="lead">
-                        Welcome to my personal webpage. I focus on developing innovative solutions and research in the field of...
-                    </p>
-                    <div class="social-links">
+                    <h1 class="mt-4">Edward Hong Wang</h1>
+                    <div class="text-center">
+                        <p>Cambridge, Boston, USA</p>
+                    </div>
+                    <div class="social-links d-flex justify-content-center">
                         <a href="https://github.com/ModelChefEdward" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-huggingface"></i></a>
                         <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">About Me</h2>
-            <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-8 intro-text">
                     <p>
-                        I am a researcher and developer interested in [Your research interests]...
+                        Hi, I'm Edward Hong Wang, a Junior Researcher at Harvard University working alongside <a href="https://publicservice.fas.harvard.edu/people/fawwaz-habbal" target="_blank">Dr. Fawwaz Habbal</a>.
                     </p>
                     <p>
-                        Currently, I am working on...
+                        My research focuses on Multi-Modal Large Language Models (LLMs) and their applications across impactful fields, including <a href="https://arxiv.org/abs/2503.12334" target="_blank">Neuroscience</a>, Robotics, Quantum Physics, and Collaborative Behavior. I'm passionate about exploring how these technologies can empower interdisciplinary advancements.
+                    </p>
+                    <p>
+                        I'm actively seeking collaborators interested in pioneering works. Current active projects include:
+                    </p>
+                    <ul>
+                        <li>HTML-to-Matrix Browser Interaction</li>
+                        <li>Transfusion: Diffusion Models combined with Transformer Architectures</li>
+                        <li>Emergent Collaborative Behaviors in Multi-Agent Systems through Reinforcement Learning</li>
+                        <li>Quantum Error Correction with Neural Networks enhanced by Reinforcement Learning</li>
+                    </ul>
+                    <p>
+                        Additionally, I'm co-teaching <a href="http://www.es26harvard.com" target="_blank">ES26/ES294 at Harvard SEAS in Spring 2025</a>, a groundbreaking course examining intersections between Human Cognition and Artificial Intelligence.
+                    </p>
+                    <p>
+                       Feel free to <a href="mailto:how173@g.harvard.edu,edwardwang0616@gmail.com">reach out</a>—I'd love to connect, collaborate, or simply say hi!
                     </p>
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="section-divider"></div>
+        </div>
     </section>
 
-    <!-- Research Section -->
+    <!-- Research Section (now Projects) -->
     <section id="research" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Research</h2>
+            <h2 class="text-center mb-4">Selected Projects</h2>
+            <p class="text-center mb-5">
+                All my projects share a common goal: to evolve "blind, deaf" Large Language Models into superhuman systems that can see, hear, and reason about the physical world, in a language we all understand and trust. I aim to usher in a new era of robotics and AI capable of surpassing human abilities in certain tasks while remaining transparent, controllable, and beneficial to humanity.
+            </p>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="research-item mb-4">
-                        <h3>Project Title 1</h3>
+                    <div class="research-item mb-5">
+                        <h3>AI-Powered Neural Implant for PTSD Monitoring</h3>
+                        <div class="project-links mb-3">
+                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Project Website</a>
+                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Demo Video</a>
+                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Research Paper</a>
+                        </div>
                         <p>
-                            Description of the research project...
+                            I developed a cutting-edge dual-loop system integrating a responsive neural implant with an AI-powered wearable platform to continuously monitor and intervene in PTSD episodes. This system is the first automatic self-reporting design in its field, enabling continuous capture and analysis of both neural signals and environmental contexts without requiring manual input from patients.
+                        </p>
+                        <p>
+                            The implanted device detects pathological brain activity in real time and delivers targeted neurostimulation when needed. Simultaneously, smart wearables and Meta glasses automatically identify environmental triggers and record contextual data, allowing for near-instant feedback and personalized therapeutic interventions.
                         </p>
                     </div>
-                    <div class="research-item mb-4">
-                        <h3>Project Title 2</h3>
+                    <div class="research-item mb-5">
+                        <h3>Building A Unified AI-centric Language System</h3>
+                        <div class="project-links mb-3">
+                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Research Paper</a>
+                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">GitHub Project</a>
+                        </div>
                         <p>
-                            Description of the research project...
+                            I co-authored groundbreaking research introducing the first-ever unified language system, published on arXiv and accepted to the ICLR 2025 Workshop. This project addresses a critical danger: as multiple intelligent agents converse, they can develop private "sub-languages" that humans cannot interpret.
+                        </p>
+                        <p>
+                            We observed that DeepSeek's R1 zero thought process seems to use different languages for different types of problems, inspiring us to design a language system that is AI-centric yet still interpretable by humans. Instead of adding more tokens and attention blocks to large models, we focused on compressing meaning into a more efficient representation—spanning the entire semantic space without human grammar constraints.
+                        </p>
+                    </div>
+                    <div class="research-item mb-5">
+                        <h3>4D Vision Transformer for Video Understanding</h3>
+                        <div class="project-links mb-3">
+                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Demo Video</a>
+                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">HuggingFace Demo</a>
+                        </div>
+                        <p>
+                            To empower LLMs with visual capabilities, I developed a 4D time-encoded Vision Transformer with temporal continuity and spatial intelligence, achieving near-superhuman comprehension of dynamic real-world events.
+                        </p>
+                        <p>
+                            While existing solutions like SLAM and NeRF focus on static scenes, our approach identifies which elements remain unchanged over time and interprets these changes according to physical laws—allowing it to predict outcomes and explain why they occur. For example, our model can infer that a ball may collide with a TV even when they never appear in the same frame.
+                        </p>
+                    </div>
+                    <div class="research-item mb-5">
+                        <h3>Mindfulness-Oriented AI Assistant</h3>
+                        <div class="project-links mb-3">
+                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">HuggingFace Demo</a>
+                        </div>
+                        <p>
+                            Motivated by the stigma many face in seeking professional therapy, I built a model infused with teachings from diverse philosophies, blending Buddhism, Stoicism, and modern psychology. I deployed an agentic workflow—akin to Monte Carlo tree search—chaining multiple specialized sub-models for reasoning, context analysis, and moral guidance.
+                        </p>
+                        <p>
+                            Chain-of-thought reasoning enhances this companion AI by allowing it to piece together context, emotion, and user intent more thoroughly than a single-pass approach. It can recognize subtle cues—such as signs of suicidal ideation—more reliably, ensuring empathetic engagement.
                         </p>
                     </div>
                 </div>
@@ -104,29 +185,21 @@
         </div>
     </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="py-5 bg-light">
+    <!-- New Company Section -->
+    <section id="company" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-4">Publications</h2>
+            <h2 class="text-center mb-4">Spiritual Well-Being Company</h2>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="publication-item mb-4">
-                        <h4>Publication Title 1</h4>
-                        <p>Authors, Conference/Journal, Year</p>
-                        <div class="publication-links">
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Paper</a>
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Code</a>
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Demo</a>
-                        </div>
-                    </div>
-                    <div class="publication-item mb-4">
-                        <h4>Publication Title 2</h4>
-                        <p>Authors, Conference/Journal, Year</p>
-                        <div class="publication-links">
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Paper</a>
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Code</a>
-                        </div>
-                    </div>
+                    <p>
+                        Together with my partner Cynthia, I co-founded <strong>HUIJUEXIN LTD</strong>, a company dedicated to spiritual well-being. Our venture stems from our conviction that any planet's progress requires both technological innovation and spiritual growth. We aim to accelerate humanity's spiritual evolution in tandem with advancing technology.
+                    </p>
+                    <p>
+                        Over the past three years, we've also supported various animal welfare initiatives, reflecting our commitment to creating a holistic impact that nurtures both people and the planet.
+                    </p>
+                    <p>
+                        Our efforts caught the attention of industry leaders, and we were subsequently invited to join the prestigious <strong>SMC Shanghai Foundation Model Innovation Center</strong>, China's largest AI incubator. By uniting cutting-edge technology with spiritual insight, HUIJUEXIN LTD aspires to catalyze a brighter, more enlightened future for all.
+                    </p>
                 </div>
             </div>
         </div>
@@ -141,10 +214,13 @@
                     <p>
                         Feel free to reach out to me at: <a href="mailto:your.email@example.com">your.email@example.com</a>
                     </p>
+                    <p>
+                        Sydney, Australia
+                    </p>
                     <div class="social-links mt-4">
                         <a href="https://github.com/ModelChefEdward" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-huggingface"></i></a>
                     </div>
                 </div>
             </div>
@@ -154,7 +230,7 @@
     <!-- Footer -->
     <footer class="py-4 bg-dark text-white">
         <div class="container text-center">
-            <p>&copy; 2023 Edward Hong Wang. All rights reserved.</p>
+            <p>&copy; 2024 Edward Hong Wang. All rights reserved.</p>
         </div>
     </footer>
 
