@@ -32,22 +32,27 @@
         .navbar-brand {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
+            color: #000 !important;
         }
         .profile-container {
             margin-top: 30px;
             margin-bottom: 30px;
+            padding: 0 15px;
         }
         .profile-image img {
-            width: 220px;
-            height: 220px;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
             border: 3px solid #f8f9fa;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 0 auto;
+            border-radius: 50%;
         }
         .intro-text {
             font-size: 1rem;
             line-height: 1.7;
             text-align: justify;
+            padding-left: 20px;
         }
         .intro-text p {
             margin-bottom: 1rem;
@@ -140,6 +145,25 @@
             text-decoration: underline;
             color: #0056b3;
         }
+        /* Make hyperlinks more distinctive */
+        .intro-text a {
+            color: #4285F4;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .intro-text a:hover {
+            color: #0039cb;
+            text-decoration: underline;
+        }
+        .current-projects a {
+            color: #4285F4;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .current-projects a:hover {
+            color: #0039cb;
+            text-decoration: underline;
+        }
         .bg-light {
             background-color: #f8f9fa !important;
         }
@@ -208,6 +232,22 @@
         .list-unstyled li {
             margin-bottom: 10px;
         }
+        /* Reach out message styling */
+        .reach-out-message {
+            transition: all 0.3s ease;
+        }
+        .reach-out-message:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(2, 90, 119, 0.1);
+        }
+        @keyframes gentle-glow {
+            0% { box-shadow: 0 0 5px rgba(2, 90, 119, 0.1); }
+            50% { box-shadow: 0 0 12px rgba(2, 90, 119, 0.2); }
+            100% { box-shadow: 0 0 5px rgba(2, 90, 119, 0.1); }
+        }
+        .reach-out-message {
+            animation: gentle-glow 3s infinite;
+        }
     </style>
 </head>
 <body>
@@ -241,22 +281,22 @@
     <section id="home" class="py-4">
         <div class="container profile-container">
             <div class="row align-items-center">
-                <div class="col-md-4 text-center">
+                <div class="col-md-3 text-center">
                     <div class="profile-image">
-                        <img src="images/profile.jpg" alt="Edward Hong Wang" class="img-fluid rounded-circle">
+                        <img src="images/profile.jpg" alt="Edward Hong Wang" class="img-fluid rounded-circle" style="width: 180px; height: 180px; object-fit: cover;">
                     </div>
-                    <h1 class="mt-4">Edward Hong Wang</h1>
+                    <h1 class="mt-3" style="font-size: 1.2rem; white-space: nowrap; font-weight: normal;">Edward Hong Wang</h1>
                     <div class="text-center">
-                        <p>Cambridge, Boston, USA</p>
+                        <p class="mb-2">Cambridge, Boston, USA</p>
                     </div>
                     <div class="social-links d-flex justify-content-center">
-                        <a href="https://github.com/ModelChefEdward" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-huggingface"></i></a>
-                        <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/ModelChefEdward" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://scholar.google.com/citations?user=1zMWedwAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="mailto:how173@g.harvard.edu,edwardwang0616@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/ed.wang_/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="col-md-8 intro-text">
+                <div class="col-md-9 intro-text">
                     <p>
                         Hi, I'm Edward Hong Wang, a Junior Researcher at Harvard University working alongside <a href="https://publicservice.fas.harvard.edu/people/fawwaz-habbal" target="_blank">Dr. Fawwaz Habbal</a>.
                     </p>
@@ -266,7 +306,8 @@
                     <p>
                         I'm actively seeking collaborators interested in pioneering works. Current active projects include:
                     </p>
-                    <ul>
+                    <ul class="current-projects" style="font-size: 0.9rem;">
+                        <li><a href="https://wxcynthia.github.io/AImonitor/" target="_blank">Neural implant, Smart Wearable and Multimodal LLM</a></li>
                         <li>HTML-to-Matrix Browser Interaction</li>
                         <li>Transfusion: Diffusion Models combined with Transformer Architectures</li>
                         <li>Emergent Collaborative Behaviors in Multi-Agent Systems through Reinforcement Learning</li>
@@ -275,8 +316,8 @@
                     <p>
                         Additionally, I'm co-teaching <a href="http://www.es26harvard.com" target="_blank">ES26/ES294 at Harvard SEAS in Spring 2025</a>, a groundbreaking course examining intersections between Human Cognition and Artificial Intelligence.
                     </p>
-                    <p>
-                       Feel free to <a href="mailto:how173@g.harvard.edu,edwardwang0616@gmail.com">reach out</a>—I'd love to connect, collaborate, or simply say hi!
+                    <p class="reach-out-message" style="color: rgb(2, 90, 119); font-weight: 500; font-size: 1.05rem; padding: 12px 15px; background-color: rgba(2, 90, 119, 0.05); border-left: 3px solid rgb(2, 90, 119); border-radius: 0 4px 4px 0; margin-top: 25px;">
+                        ✨ Feel free to <a href="mailto:how173@g.harvard.edu,edwardwang0616@gmail.com">reach out</a>—I'd love to connect, collaborate, or simply say hi! 🧠 🤖 🌟
                     </p>
                 </div>
             </div>
@@ -442,9 +483,10 @@
                         </li>
                     </ul>
                     <div class="social-links mt-3">
-                        <a href="https://github.com/ModelChefEdward" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-huggingface"></i></a>
+                        <a href="https://github.com/ModelChefEdward" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://scholar.google.com/citations?user=1zMWedwAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="mailto:how173@g.harvard.edu,edwardwang0616@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/ed.wang_/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
