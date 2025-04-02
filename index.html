@@ -4,42 +4,209 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edward Hong Wang</title>
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <style>
         body {
+            font-family: 'Roboto', sans-serif;
             padding-top: 70px;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        .navbar {
+            box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+        }
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
         }
         .profile-container {
-            margin-top: 50px;
-            margin-bottom: 50px;
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
         .profile-image img {
-            width: 250px;
-            height: 250px;
+            width: 220px;
+            height: 220px;
             object-fit: cover;
-            border: 5px solid #f8f9fa;
+            border: 3px solid #f8f9fa;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .intro-text {
-            font-size: 1.1rem;
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.7;
+            text-align: justify;
+        }
+        .intro-text p {
+            margin-bottom: 1rem;
+        }
+        .intro-text ul {
+            padding-left: 1.5rem;
         }
         .social-links {
-            margin-top: 20px;
+            margin-top: 15px;
         }
         .social-links a {
             margin-right: 15px;
-            font-size: 1.3rem;
-            color: #0d6efd;
+            font-size: 1.2rem;
+            color: rgb(2, 90, 119);
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #0056b3;
         }
         h1 {
             margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
         }
         .section-divider {
-            margin: 40px 0;
+            margin: 30px 0;
             border-top: 1px solid #dee2e6;
+        }
+        section {
+            padding: 20px 0;
+        }
+        .research-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .research-item .img {
+            margin-right: 20px;
+            flex-shrink: 0;
+            width: 180px;
+        }
+        .research-item .img img {
+            width: 100%;
+            border: 1px solid #f0f0f0;
+            border-radius: 4px;
+        }
+        .research-item .description {
+            flex-grow: 1;
+        }
+        .research-item .title {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .research-item .project-links {
+            margin-bottom: 10px;
+        }
+        .research-item .project-links a {
+            margin-right: 10px;
+            font-size: 0.85rem;
+            padding: 0.2rem 0.5rem;
+            color: rgb(2, 90, 119);
+            border-color: rgb(2, 90, 119);
+        }
+        .research-item .project-links a:hover {
+            background-color: rgb(2, 90, 119);
+            color: white;
+        }
+        .btn-outline-primary {
+            color: rgb(2, 90, 119);
+            border-color: rgb(2, 90, 119);
+        }
+        .btn-outline-primary:hover {
+            background-color: rgb(2, 90, 119);
+            border-color: rgb(2, 90, 119);
+        }
+        a {
+            color: rgb(2, 90, 119);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+        .bg-light {
+            background-color: #f8f9fa !important;
+        }
+        #contact p {
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            padding: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+        .highlight {
+            color: rgb(2, 90, 119);
+            font-weight: bold;
+        }
+        /* News Slider Styles */
+        .news-slider {
+            margin: 20px 0 40px;
+        }
+        .news-slider .slick-slide {
+            margin: 0 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border: 1px solid #eee;
+            min-height: 80px;
+            display: flex !important;
+            align-items: center;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .news-slider .slick-slide b {
+            color: rgb(2, 90, 119);
+            margin-right: 5px;
+        }
+        .news-slider .slick-dots {
+            bottom: -30px;
+        }
+        .news-slider .slick-dots li button:before {
+            font-size: 10px;
+            color: rgb(2, 90, 119);
+        }
+        .news-slider .slick-prev, .news-slider .slick-next {
+            width: 25px;
+            height: 25px;
+        }
+        .news-slider .slick-prev:before, .news-slider .slick-next:before {
+            color: rgb(2, 90, 119);
+            font-size: 25px;
+        }
+        .news-slider .slick-prev {
+            left: -25px;
+        }
+        .news-slider .slick-next {
+            right: -25px;
+        }
+        section#news {
+            padding-bottom: 50px;
+        }
+        /* Icon spacing fix */
+        .fa-fw {
+            width: 1.25em;
+            display: inline-block;
+            text-align: center;
+            margin-right: 10px;
+        }
+        .list-unstyled li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -119,6 +286,23 @@
         </div>
     </section>
 
+    <!-- News Section with Slider -->
+    <section id="news" class="py-4">
+        <div class="container">
+            <h2 class="mb-4">Recent News</h2>
+            <div class="news-slider">
+                <div><b>05/24: </b>Paper accepted at ICLR 2025 Workshop on Multi-Modal Foundation Models.</div>
+                <div><b>04/24: </b>Joined Harvard University as a Junior Researcher.</div>
+                <div><b>03/24: </b>Our paper on Neural Implants for PTSD monitoring was accepted to Neuron.</div>
+                <div><b>02/24: </b>Invited talk at MIT CSAIL on Multi-Modal LLMs.</div>
+                <div><b>01/24: </b>Released new dataset for collaborative AI behaviors.</div>
+                <div><b>12/23: </b>Demo of 4D Vision Transformer available on HuggingFace.</div>
+                <div><b>11/23: </b>Announced course offering at Harvard SEAS for Spring 2025.</div>
+                <div><b>10/23: </b>Workshop on Quantum Computing and ML approved for 2024.</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Research Section (now Projects) -->
     <section id="research" class="py-5">
         <div class="container">
@@ -128,58 +312,80 @@
             </p>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="research-item mb-5">
-                        <h3>AI-Powered Neural Implant for PTSD Monitoring</h3>
-                        <div class="project-links mb-3">
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Project Website</a>
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Demo Video</a>
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Research Paper</a>
-                        </div>
-                        <p>
-                            I developed a cutting-edge dual-loop system integrating a responsive neural implant with an AI-powered wearable platform to continuously monitor and intervene in PTSD episodes. This system is the first automatic self-reporting design in its field, enabling continuous capture and analysis of both neural signals and environmental contexts without requiring manual input from patients.
-                        </p>
-                        <p>
-                            The implanted device detects pathological brain activity in real time and delivers targeted neurostimulation when needed. Simultaneously, smart wearables and Meta glasses automatically identify environmental triggers and record contextual data, allowing for near-instant feedback and personalized therapeutic interventions.
-                        </p>
-                    </div>
-                    <div class="research-item mb-5">
-                        <h3>Building A Unified AI-centric Language System</h3>
-                        <div class="project-links mb-3">
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Research Paper</a>
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">GitHub Project</a>
-                        </div>
-                        <p>
-                            I co-authored groundbreaking research introducing the first-ever unified language system, published on arXiv and accepted to the ICLR 2025 Workshop. This project addresses a critical danger: as multiple intelligent agents converse, they can develop private "sub-languages" that humans cannot interpret.
-                        </p>
-                        <p>
-                            We observed that DeepSeek's R1 zero thought process seems to use different languages for different types of problems, inspiring us to design a language system that is AI-centric yet still interpretable by humans. Instead of adding more tokens and attention blocks to large models, we focused on compressing meaning into a more efficient representation—spanning the entire semantic space without human grammar constraints.
-                        </p>
-                    </div>
-                    <div class="research-item mb-5">
-                        <h3>4D Vision Transformer for Video Understanding</h3>
-                        <div class="project-links mb-3">
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Demo Video</a>
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">HuggingFace Demo</a>
-                        </div>
-                        <p>
-                            To empower LLMs with visual capabilities, I developed a 4D time-encoded Vision Transformer with temporal continuity and spatial intelligence, achieving near-superhuman comprehension of dynamic real-world events.
-                        </p>
-                        <p>
-                            While existing solutions like SLAM and NeRF focus on static scenes, our approach identifies which elements remain unchanged over time and interprets these changes according to physical laws—allowing it to predict outcomes and explain why they occur. For example, our model can infer that a ball may collide with a TV even when they never appear in the same frame.
-                        </p>
-                    </div>
-                    <div class="research-item mb-5">
-                        <h3>Mindfulness-Oriented AI Assistant</h3>
-                        <div class="project-links mb-3">
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">HuggingFace Demo</a>
-                        </div>
-                        <p>
-                            Motivated by the stigma many face in seeking professional therapy, I built a model infused with teachings from diverse philosophies, blending Buddhism, Stoicism, and modern psychology. I deployed an agentic workflow—akin to Monte Carlo tree search—chaining multiple specialized sub-models for reasoning, context analysis, and moral guidance.
-                        </p>
-                        <p>
-                            Chain-of-thought reasoning enhances this companion AI by allowing it to piece together context, emotion, and user intent more thoroughly than a single-pass approach. It can recognize subtle cues—such as signs of suicidal ideation—more reliably, ensuring empathetic engagement.
-                        </p>
-                    </div>
+                    <ul class="list-unstyled">
+                        <li class="research-item">
+                            <div class="img">
+                                <img src="images/neural-implant.jpg" class="img-responsive" alt="Neural Implant">
+                            </div>
+                            <div class="description">
+                                <p class="title">AI-Powered Neural Implant for PTSD Monitoring</p>
+                                <div class="project-links mb-3">
+                                    <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Project Website</a>
+                                    <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Demo Video</a>
+                                    <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Research Paper</a>
+                                </div>
+                                <p>
+                                    I developed a cutting-edge dual-loop system integrating a responsive neural implant with an AI-powered wearable platform to continuously monitor and intervene in PTSD episodes. This system is the first automatic self-reporting design in its field, enabling continuous capture and analysis of both neural signals and environmental contexts without requiring manual input from patients.
+                                </p>
+                                <p>
+                                    The implanted device detects pathological brain activity in real time and delivers targeted neurostimulation when needed. Simultaneously, smart wearables and Meta glasses automatically identify environmental triggers and record contextual data, allowing for near-instant feedback and personalized therapeutic interventions.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="research-item">
+                            <div class="img">
+                                <img src="images/ai-language.jpg" class="img-responsive" alt="AI Language System">
+                            </div>
+                            <div class="description">
+                                <p class="title">Building A Unified AI-centric Language System</p>
+                                <div class="project-links mb-3">
+                                    <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Research Paper</a>
+                                    <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">GitHub Project</a>
+                                </div>
+                                <p>
+                                    I co-authored groundbreaking research introducing the first-ever unified language system, published on arXiv and accepted to the ICLR 2025 Workshop. This project addresses a critical danger: as multiple intelligent agents converse, they can develop private "sub-languages" that humans cannot interpret.
+                                </p>
+                                <p>
+                                    We observed that DeepSeek's R1 zero thought process seems to use different languages for different types of problems, inspiring us to design a language system that is AI-centric yet still interpretable by humans. Instead of adding more tokens and attention blocks to large models, we focused on compressing meaning into a more efficient representation—spanning the entire semantic space without human grammar constraints.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="research-item">
+                            <div class="img">
+                                <img src="images/vision-transformer.jpg" class="img-responsive" alt="4D Vision Transformer">
+                            </div>
+                            <div class="description">
+                                <p class="title">4D Vision Transformer for Video Understanding</p>
+                                <div class="project-links mb-3">
+                                    <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Demo Video</a>
+                                    <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">HuggingFace Demo</a>
+                                </div>
+                                <p>
+                                    To empower LLMs with visual capabilities, I developed a 4D time-encoded Vision Transformer with temporal continuity and spatial intelligence, achieving near-superhuman comprehension of dynamic real-world events.
+                                </p>
+                                <p>
+                                    While existing solutions like SLAM and NeRF focus on static scenes, our approach identifies which elements remain unchanged over time and interprets these changes according to physical laws—allowing it to predict outcomes and explain why they occur. For example, our model can infer that a ball may collide with a TV even when they never appear in the same frame.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="research-item">
+                            <div class="img">
+                                <img src="images/mindfulness-ai.jpg" class="img-responsive" alt="Mindfulness AI">
+                            </div>
+                            <div class="description">
+                                <p class="title">Mindfulness-Oriented AI Assistant</p>
+                                <div class="project-links mb-3">
+                                    <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">HuggingFace Demo</a>
+                                </div>
+                                <p>
+                                    Motivated by the stigma many face in seeking professional therapy, I built a model infused with teachings from diverse philosophies, blending Buddhism, Stoicism, and modern psychology. I deployed an agentic workflow—akin to Monte Carlo tree search—chaining multiple specialized sub-models for reasoning, context analysis, and moral guidance.
+                                </p>
+                                <p>
+                                    Chain-of-thought reasoning enhances this companion AI by allowing it to piece together context, emotion, and user intent more thoroughly than a single-pass approach. It can recognize subtle cues—such as signs of suicidal ideation—more reliably, ensuring empathetic engagement.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -188,18 +394,22 @@
     <!-- New Company Section -->
     <section id="company" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-4">Spiritual Well-Being Company</h2>
+            <h2 class="mb-4">Spiritual Well-Being Company</h2>
             <div class="row">
-                <div class="col-md-12">
-                    <p>
-                        Together with my partner Cynthia, I co-founded <strong>HUIJUEXIN LTD</strong>, a company dedicated to spiritual well-being. Our venture stems from our conviction that any planet's progress requires both technological innovation and spiritual growth. We aim to accelerate humanity's spiritual evolution in tandem with advancing technology.
-                    </p>
-                    <p>
-                        Over the past three years, we've also supported various animal welfare initiatives, reflecting our commitment to creating a holistic impact that nurtures both people and the planet.
-                    </p>
-                    <p>
-                        Our efforts caught the attention of industry leaders, and we were subsequently invited to join the prestigious <strong>SMC Shanghai Foundation Model Innovation Center</strong>, China's largest AI incubator. By uniting cutting-edge technology with spiritual insight, HUIJUEXIN LTD aspires to catalyze a brighter, more enlightened future for all.
-                    </p>
+                <div class="col-lg-12">
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>
+                                Together with my partner Cynthia, I co-founded <b>HUIJUEXIN LTD</b>, a company dedicated to spiritual well-being. Our venture stems from our conviction that any planet's progress requires both technological innovation and spiritual growth. We aim to accelerate humanity's spiritual evolution in tandem with advancing technology.
+                            </p>
+                            <p>
+                                Over the past three years, we've also supported various animal welfare initiatives, reflecting our commitment to creating a holistic impact that nurtures both people and the planet.
+                            </p>
+                            <p>
+                                Our efforts caught the attention of industry leaders, and we were subsequently invited to join the prestigious <b>SMC Shanghai Foundation Model Innovation Center</b>, China's largest AI incubator. By uniting cutting-edge technology with spiritual insight, HUIJUEXIN LTD aspires to catalyze a brighter, more enlightened future for all.
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -208,16 +418,30 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Contact</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-                    <p>
-                        Feel free to reach out to me at: <a href="mailto:your.email@example.com">your.email@example.com</a>
-                    </p>
-                    <p>
-                        Sydney, Australia
-                    </p>
-                    <div class="social-links mt-4">
+            <h2 class="mb-4">Contact</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Email</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="fas fa-envelope fa-fw mr-2"></i>
+                            <a href="mailto:how173@g.harvard.edu">how173@g.harvard.edu</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope fa-fw mr-2"></i>
+                            <a href="mailto:edwardwang0616@gmail.com">edwardwang0616@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3>Location</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw mr-2"></i>
+                            Cambridge, Boston, USA
+                        </li>
+                    </ul>
+                    <div class="social-links mt-3">
                         <a href="https://github.com/ModelChefEdward" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-huggingface"></i></a>
@@ -236,5 +460,34 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.news-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                infinite: true,
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 </body>
 </html> 
