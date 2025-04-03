@@ -302,6 +302,21 @@
             font-size: 1.5rem;
             color: #2a2a2a;
         }
+        /* Make research items stack on mobile */
+        @media (max-width: 767px) {
+            .research-item {
+                flex-direction: column;
+            }
+            .research-item .img,
+            .teaser-image {
+                width: 100% !important;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .research-item .description {
+                padding-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
