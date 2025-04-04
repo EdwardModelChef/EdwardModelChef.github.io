@@ -6,7 +6,7 @@ This repository contains the code for my personal website hosted on GitHub Pages
 
 1. **Repository Setup**
    - Fork or clone this repository to your GitHub account
-   - Rename the repository to `edwardmodelchef.github.io` (replacing "edwardmodelchef" with your GitHub username if different)
+   - Rename the repository to `EdwardModelChef.github.io` (replacing "EdwardModelChef" with your GitHub username if different)
 
 2. **Customize Content**
    - Update the profile picture: Replace `images/profile.jpg` with your photo
@@ -15,7 +15,7 @@ This repository contains the code for my personal website hosted on GitHub Pages
 
 3. **Deployment**
    - Push changes to your GitHub repository
-   - GitHub will automatically deploy your site at `https://edwardmodelchef.github.io`
+   - GitHub will automatically deploy your site at `https://EdwardModelChef.github.io`
    - You can check the deployment status in the "Settings" > "Pages" section of your GitHub repository
 
 ## Local Development
