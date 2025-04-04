@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edward Hong Wang</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/profile_square.jpg" type="image/jpeg">
     <!-- Slick Slider CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
@@ -350,6 +352,43 @@
                 padding: 20px 15px;
             }
         }
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Active Nav Link Styling */
+        .navbar-nav .nav-link.active {
+            color: rgb(2, 90, 119) !important;
+            font-weight: 500;
+            border-bottom: 2px solid rgb(2, 90, 119);
+        }
+
+        /* Section transition effect */
+        section {
+            transition: background-color 0.5s ease;
+        }
+
+        section:target {
+            animation: highlight 1.5s ease-out;
+        }
+
+        @keyframes highlight {
+            0% { background-color: rgba(2, 90, 119, 0.05); }
+            100% { background-color: transparent; }
+        }
     </style>
 </head>
 <body>
@@ -366,10 +405,13 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#research">Projects</a>
+                        <a class="nav-link" href="#teaching">Teaching</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#company">Company</a>
+                        <a class="nav-link" href="#research">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -392,10 +434,11 @@
                         <p class="mb-2">Cambridge, Boston, USA</p>
                     </div>
                     <div class="social-links d-flex justify-content-center">
-                        <a href="https://github.com/EdwardModelChef" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://scholar.google.com/citations?user=1zMWedwAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="https://github.com/EdwardModelChef" target="_blank" title="GitHub"><img src="images/icons/github-new.png" alt="GitHub" style="width: 23px; height: 23px; margin-top: -5px;"></a>
+                        <a href="https://scholar.google.com/citations?user=1zMWedwAAAAJ&hl=en" target="_blank" title="Google Scholar"><img src="images/icons/google-scholar.png" alt="Google Scholar" style="width: 20px; height: 20px; margin-top: -5px;"></a>
                         <a href="mailto:how173@g.harvard.edu,edwardwang0616@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                        <a href="https://www.instagram.com/ed.wang_/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/ed.wang_/" target="_blank" title="Instagram"><img src="images/icons/instagram.png" alt="Instagram" style="width: 20px; height: 20px; margin-top: -5px;"></a>
+                        <a href="https://x.com/EdwardModelChef" target="_blank" title="X"><img src="images/icons/x-logo-base64.png" alt="X" style="width: 23px; height: 23px; margin-top: -5px;"></a>
                     </div>
                 </div>
                 <div class="col-md-9 intro-text">
@@ -408,7 +451,7 @@
                     <p>
                         I'm currently seeking collaborators interested in pioneering research. Active projects include:
                     </p>
-                    <ul class="current-projects" style="font-size: 0.9rem;">
+                    <ul class="current-projects">
                         <li><a href="https://wxcynthia.github.io/AImonitor/" target="_blank">Neural Implant, Smart Wearable, and Multimodal LLM integration</a></li>
                         <li>HTML-to-Matrix Browser Interaction</li>
                         <li>Transfusion: Diffusion Models combined with Transformer Architectures</li>
@@ -432,32 +475,34 @@
             <h2 class="text-center mb-4">Teaching</h2>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="teaching-item d-md-flex">
-                        <div class="teaching-img me-md-4 mb-3 mb-md-0">
-                            <img src="images/course_image.png" class="img-fluid rounded" alt="Course Image" style="width: 100%; max-width: 250px; border: 1px solid #f0f0f0; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                        </div>
-                        <div class="teaching-content">
-                            <p style="font-weight: 700; margin-bottom: 10px; font-size: 1.5rem; color: #2a2a2a;">Spring 2025 Harvard ES26 / ES294 AI and Human Cognition</p>
-                            <p class="workshop-info">
-                                Lecture: Tuesdays 09:45 AM - 12:30 PM @ 114 Western Ave Rm 2111<br>
-                                Lab: Mondays 18:00 PM - 19:30 PM @ 114 Western Ave Rm 2112
-                            </p>
-                            <div class="mt-3">
-                                <a href="http://www.es26harvard.com" target="_blank" class="btn btn-sm btn-outline-primary me-2 mb-2">
-                                    <i class="fas fa-globe me-1"></i> Course Page
-                                </a>
-                                <a href="https://github.com/EdwardModelChef/2025_Spring_Harvard_ES26_ES294_Humanity_and_AI" target="_blank" class="btn btn-sm btn-outline-primary me-2 mb-2">
-                                    <i class="fab fa-github me-1"></i> GitHub Repo
-                                </a>
-                                <a href="https://canvas.harvard.edu/courses/151486" target="_blank" class="btn btn-sm btn-outline-primary me-2 mb-2">
-                                    <i class="fas fa-book me-1"></i> Canvas Page
-                                </a>
-                                <a href="https://summer-dogsled-95a.notion.site/1a66db3a34c980a7920bceac0165245a?v=1a66db3a34c980799d70000c371d3b24&pvs=74" target="_blank" class="btn btn-sm btn-outline-primary mb-2">
-                                    <i class="fas fa-calendar-alt me-1"></i> Lab Schedule
-                                </a>
+                    <ul class="list-unstyled">
+                        <li class="research-item">
+                            <div class="img teaser-image">
+                                <img src="images/course_image.png" class="img-responsive" alt="Course Image">
                             </div>
-                        </div>
-                    </div>
+                            <div class="description">
+                                <p class="title">Spring 2025 Harvard ES26 / ES294 AI and Human Cognition</p>
+                                <p class="workshop-info">
+                                    Lecture: Tuesdays 09:45 AM - 12:30 PM @ 114 Western Ave Rm 2111<br>
+                                    Lab: Mondays 18:00 PM - 19:30 PM @ 114 Western Ave Rm 2112
+                                </p>
+                                <div class="project-links mb-3">
+                                    <a href="http://www.es26harvard.com" target="_blank" class="btn btn-sm btn-outline-primary me-2 mb-2">
+                                        <i class="fas fa-graduation-cap me-1"></i> Course Page
+                                    </a>
+                                    <a href="https://github.com/EdwardModelChef/2025_Spring_Harvard_ES26_ES294_Humanity_and_AI" target="_blank" class="btn btn-sm btn-outline-primary me-2 mb-2">
+                                        <i class="fab fa-github me-1"></i> GitHub Repo
+                                    </a>
+                                    <a href="https://canvas.harvard.edu/courses/151486" target="_blank" class="btn btn-sm btn-outline-primary me-2 mb-2">
+                                        <i class="fas fa-book me-1"></i> Canvas Page
+                                    </a>
+                                    <a href="https://summer-dogsled-95a.notion.site/1a66db3a34c980a7920bceac0165245a?v=1a66db3a34c980799d70000c371d3b24&pvs=74" target="_blank" class="btn btn-sm btn-outline-primary mb-2">
+                                        <i class="fas fa-calendar-alt me-1"></i> Lab Schedule
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -475,77 +520,128 @@
                     <ul class="list-unstyled">
                         <li class="research-item">
                             <div class="img teaser-image">
-                                <img src="https://wxcynthia.github.io/AIlanguage/static/images/teaser.gif" class="img-responsive" alt="AI Language System">
+                                <img src="images/ai_language_teaser.gif" class="img-responsive" alt="AI Language System">
                             </div>
                             <div class="description">
                                 <p class="title">Building A Unified AI-centric Language System</p>
                                 <p class="workshop-info">ICLR 2025 Workshop on Deep Generative Model in Machine Learning</p>
                                 <div class="project-links mb-3">
-                                    <a href="https://wxcynthia.github.io/AIlanguage/" target="_blank" class="btn btn-sm btn-outline-primary">Project Page</a>
-                                    <a href="https://arxiv.org/abs/2502.04488" target="_blank" class="btn btn-sm btn-outline-primary">Arxiv Paper</a>
+                                    <a href="https://wxcynthia.github.io/AIlanguage/" target="_blank" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-globe me-1"></i> Page
+                                    </a>
+                                    <a href="https://arxiv.org/abs/2502.04488" target="_blank" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-file-pdf me-1"></i> Paper
+                                    </a>
                                 </div>
                                 <p>
-                                    In this pioneering work introducing the first-ever unified language system, we tackle a major risk: under RL training, LLM and AI agents forming private, human-inaccessible "sub-languages." Our AI-centric approach addresses biases, ambiguities, and inefficiencies in natural language by translating diverse inputs into a concise, unambiguous format. This not only reduces computational overhead but also strengthens transparency and fairness, paving the way for more secure AI-to-AI and human-to-AI communication.
+                                    In this pioneering work introducing the first-ever <strong>unified language system</strong>, we tackle a major risk: under RL training, LLM and AI agents forming private, human-inaccessible <em>"sub-languages."</em> Our <strong>AI-centric approach</strong> addresses biases, ambiguities, and inefficiencies in natural language by translating diverse inputs into a concise, unambiguous format. This not only <em>reduces computational overhead</em> but also <em>strengthens transparency and fairness</em>, paving the way for more secure AI-to-AI and human-to-AI communication.
                                 </p>
                             </div>
                         </li>
                         <li class="research-item">
-                            <div class="img">
-                                <img src="images/neural-implant.jpg" class="img-responsive" alt="Neural Implant">
+                            <div class="img teaser-image">
+                                <a href="https://www.youtube.com/watch?v=0spz_fBXCEw" target="_blank" style="position: relative; display: block;">
+                                    <img src="https://img.youtube.com/vi/0spz_fBXCEw/hqdefault.jpg" alt="AI-Powered Neural Implant for PTSD Monitoring" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                                        <div style="width: 68px; height: 48px; background-color: #FF0000; border-radius: 10px; display: flex; align-items: center; justify-content: center; opacity: 0.9;">
+                                            <div style="width: 0; height: 0; border-style: solid; border-width: 10px 0 10px 20px; border-color: transparent transparent transparent #FFFFFF; margin-left: 5px;"></div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                             <div class="description">
                                 <p class="title">AI-Powered Neural Implant for PTSD Monitoring</p>
                                 <div class="project-links mb-3">
-                                    <a href="https://wxcynthia.github.io/AImonitor/" target="_blank" class="btn btn-sm btn-outline-primary">Project Website</a>
-                                    <a href="https://www.youtube.com/watch?v=0spz_fBXCEw" target="_blank" class="btn btn-sm btn-outline-primary">Demo Video</a>
-                                    <a href="https://arxiv.org/abs/2503.12334" target="_blank" class="btn btn-sm btn-outline-primary">Research Paper</a>
+                                    <a href="https://wxcynthia.github.io/AImonitor/" target="_blank" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-globe me-1"></i> Page
+                                    </a>
+                                    <a href="https://www.youtube.com/watch?v=0spz_fBXCEw" target="_blank" class="btn btn-sm btn-outline-primary">
+                                        <img src="images/icons/youtube.png" alt="YouTube" style="width: 18px; height: 14px; margin-top: -3px; margin-right: 5px;"> Demo Video
+                                    </a>
+                                    <a href="https://arxiv.org/abs/2503.12334" target="_blank" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-file-pdf me-1"></i> Paper
+                                    </a>
                                 </div>
                                 <p>
-                                    I developed a cutting-edge dual-loop system integrating a responsive neural implant with an AI-powered wearable platform to continuously monitor and intervene in PTSD episodes. This system is the first automatic self-reporting design in its field, enabling continuous capture and analysis of both neural signals and environmental contexts without requiring manual input from patients.
+                                    I developed a cutting-edge <strong>dual-loop system</strong> integrating a responsive neural implant with an AI-powered wearable platform to continuously monitor and intervene in PTSD episodes. This system is the <em>first automatic self-reporting design</em> in its field, enabling continuous capture and analysis of both neural signals and environmental contexts without requiring manual input from patients.
                                 </p>
                                 <p>
-                                    The implanted device detects pathological brain activity in real time and delivers targeted neurostimulation when needed. Simultaneously, smart wearables and Meta glasses automatically identify environmental triggers and record contextual data, allowing for near-instant feedback and personalized therapeutic interventions.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="research-item">
-                            <div class="img">
-                                <img src="images/vision-transformer.jpg" class="img-responsive" alt="4D Vision Transformer">
-                            </div>
-                            <div class="description">
-                                <p class="title">4D Vision Transformer for Video Understanding</p>
-                                <div class="project-links mb-3">
-                                    <a href="https://www.youtube.com/watch?v=XuKRg7bRnME" target="_blank" class="btn btn-sm btn-outline-primary">Demo Video</a>
-                                    <a href="https://huggingface.co/spaces/wxcyn/Video-Analysis-Public" target="_blank" class="btn btn-sm btn-outline-primary">HuggingFace Demo</a>
-                                </div>
-                                <p>
-                                    To empower LLMs with visual capabilities, I developed a 4D time-encoded Vision Transformer with temporal continuity and spatial intelligence, achieving near-superhuman comprehension of dynamic real-world events.
-                                </p>
-                                <p>
-                                    While existing solutions like SLAM and NeRF focus on static scenes, our approach identifies which elements remain unchanged over time and interprets these changes according to physical laws—allowing it to predict outcomes and explain why they occur. For example, our model can infer that a ball may collide with a TV even when they never appear in the same frame.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="research-item">
-                            <div class="img">
-                                <img src="images/mindfulness-ai.jpg" class="img-responsive" alt="Mindfulness AI">
-                            </div>
-                            <div class="description">
-                                <p class="title">Mindfulness-Oriented AI Assistant</p>
-                                <div class="project-links mb-3">
-                                    <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">HuggingFace Demo</a>
-                                </div>
-                                <p>
-                                    Motivated by the stigma many face in seeking professional therapy, I built a model infused with teachings from diverse philosophies, blending Buddhism, Stoicism, and modern psychology. I deployed an agentic workflow—akin to Monte Carlo tree search—chaining multiple specialized sub-models for reasoning, context analysis, and moral guidance.
-                                </p>
-                                <p>
-                                    Chain-of-thought reasoning enhances this companion AI by allowing it to piece together context, emotion, and user intent more thoroughly than a single-pass approach. It can recognize subtle cues—such as signs of suicidal ideation—more reliably, ensuring empathetic engagement.
+                                    The implanted device <strong>detects pathological brain activity in real time</strong> and delivers targeted neurostimulation when needed. Simultaneously, smart wearables and Meta glasses automatically identify environmental triggers and record contextual data, allowing for <em>near-instant feedback</em> and <em>personalized therapeutic interventions</em>.
                                 </p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
+        </div>
+        <div class="container">
+            <div class="section-divider"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Projects</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-unstyled">
+                        <li class="research-item">
+                            <div class="img teaser-image">
+                                <a href="https://www.youtube.com/watch?v=XuKRg7bRnME" target="_blank" style="position: relative; display: block;">
+                                    <img src="https://img.youtube.com/vi/XuKRg7bRnME/hqdefault.jpg" alt="4D Vision Transformer for Video Understanding" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                                        <div style="width: 68px; height: 48px; background-color: #FF0000; border-radius: 10px; display: flex; align-items: center; justify-content: center; opacity: 0.9;">
+                                            <div style="width: 0; height: 0; border-style: solid; border-width: 10px 0 10px 20px; border-color: transparent transparent transparent #FFFFFF; margin-left: 5px;"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="description">
+                                <p class="title">4D Vision Transformer for Video Understanding</p>
+                                <div class="project-links mb-3">
+                                    <a href="https://www.youtube.com/watch?v=XuKRg7bRnME" target="_blank" class="btn btn-sm btn-outline-primary"><img src="images/icons/youtube.png" alt="YouTube" style="width: 18px; height: 14px; margin-top: -3px; margin-right: 5px;"> Demo Video</a>
+                                    <a href="https://huggingface.co/spaces/wxcyn/Video-Analysis-Public" target="_blank" class="btn btn-sm btn-outline-primary"><img src="images/icons/huggingface.svg" alt="HuggingFace" style="width: 16px; height: 16px; margin-top: -3px; margin-right: 5px;"> HuggingFace Demo</a>
+                                </div>
+                                <p>
+                                    To empower LLMs with visual capabilities, I developed a <strong>4D time-encoded Vision Transformer</strong> with temporal continuity and spatial intelligence, achieving <em>near-superhuman comprehension</em> of dynamic real-world events.
+                                </p>
+                                <p>
+                                    While existing solutions like SLAM and NeRF focus on static scenes, our approach <strong>identifies which elements remain unchanged over time</strong> and <em>interprets these changes according to physical laws</em>—allowing it to predict outcomes and explain why they occur. For example, our model can infer that a ball may collide with a TV even when they never appear in the same frame.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="research-item">
+                            <div class="img teaser-image">
+                                <a href="https://www.youtube.com/shorts/jO7XPpAj64o" target="_blank" style="position: relative; display: block;">
+                                    <img src="https://img.youtube.com/vi/jO7XPpAj64o/hqdefault.jpg" alt="Contextualized Subtitle for Deaf and Hard of Hearing (SDH)" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                                        <div style="width: 68px; height: 48px; background-color: #FF0000; border-radius: 10px; display: flex; align-items: center; justify-content: center; opacity: 0.9;">
+                                            <div style="width: 0; height: 0; border-style: solid; border-width: 10px 0 10px 20px; border-color: transparent transparent transparent #FFFFFF; margin-left: 5px;"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="description">
+                                <p class="title">Contextualized Subtitle for Deaf and Hard of Hearing (SDH)</p>
+                                <div class="project-links mb-3">
+                                    <a href="https://www.youtube.com/shorts/jO7XPpAj64o" target="_blank" class="btn btn-sm btn-outline-primary"><img src="images/icons/youtube.png" alt="YouTube" style="width: 18px; height: 14px; margin-top: -3px; margin-right: 5px;"> Demo Video</a>
+                                    <a href="https://github.com/EdwardModelChef/SDH_contextualized-subtitles-for-deaf" target="_blank" class="btn btn-sm btn-outline-primary"><img src="images/icons/github-new.png" alt="GitHub" style="width: 16px; height: 16px; margin-top: -3px; margin-right: 5px;"> GitHub Repo</a>
+                                </div>
+                                <p>
+                                    Most speech-to-text systems focus exclusively on converting audio into raw text, overlooking context, non-speech cues, and emotional nuance. Our system genuinely <strong>"listens" and interprets the soundtrack</strong>, adding clarity to ambiguous phrases (like distinguishing if "the fish is 1,000 pounds" refers to weight or cost).
+                                </p>
+                                <p>
+                                    Our pipeline enhances transcripts with <strong>contextual coherence</strong>, segments content logically, incorporates <em>ambient sounds</em>, and analyzes <em>tone patterns</em> to describe emotional content—creating rich transcripts that capture the full communicative experience. This approach expands accessibility for the deaf and hard-of-hearing community while being <strong>20 times cheaper than human transcription</strong> ($0.1 vs $2 per minute). Considering the film subtitling market is valued at $8.51 billion in 2024, our model could save up to <em>$6 billion</em>. Despite its profit potential, we open-sourced the solution to promote inclusivity.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section-divider"></div>
         </div>
     </section>
 
@@ -576,10 +672,11 @@
                         </li>
                     </ul>
                     <div class="social-links mt-3">
-                        <a href="https://github.com/EdwardModelChef" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://scholar.google.com/citations?user=1zMWedwAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="https://github.com/EdwardModelChef" target="_blank" title="GitHub"><img src="images/icons/github-new.png" alt="GitHub" style="width: 23px; height: 23px; margin-top: -5px;"></a>
+                        <a href="https://scholar.google.com/citations?user=1zMWedwAAAAJ&hl=en" target="_blank" title="Google Scholar"><img src="images/icons/google-scholar.png" alt="Google Scholar" style="width: 20px; height: 20px; margin-top: -5px;"></a>
                         <a href="mailto:how173@g.harvard.edu,edwardwang0616@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                        <a href="https://www.instagram.com/ed.wang_/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/ed.wang_/" target="_blank" title="Instagram"><img src="images/icons/instagram.png" alt="Instagram" style="width: 20px; height: 20px; margin-top: -5px;"></a>
+                        <a href="https://x.com/EdwardModelChef" target="_blank" title="X"><img src="images/icons/x-logo-base64.png" alt="X" style="width: 23px; height: 23px; margin-top: -5px;"></a>
                     </div>
                 </div>
             </div>
@@ -595,5 +692,84 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    
+    <script>
+        // Scroll animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animate-on-scroll class to sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('animate-on-scroll');
+            });
+            
+            // Animate elements when they come into view
+            function checkScroll() {
+                const elements = document.querySelectorAll('.animate-on-scroll');
+                const windowHeight = window.innerHeight;
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    
+                    if (elementPosition < windowHeight * 0.85) {
+                        element.classList.add('animated');
+                    }
+                });
+            }
+            
+            // Initial check
+            checkScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', checkScroll);
+            
+            // Update active nav link based on scroll position
+            function updateActiveNavLink() {
+                const sections = document.querySelectorAll('section');
+                let currentSectionId = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (window.pageYOffset >= sectionTop - 100) {
+                        currentSectionId = section.getAttribute('id');
+                    }
+                });
+                
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    const href = link.getAttribute('href').substring(1);
+                    if (href === currentSectionId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Update active nav link on scroll
+            window.addEventListener('scroll', updateActiveNavLink);
+            updateActiveNavLink();
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - navbarHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update URL without page jump
+                        history.pushState(null, null, targetId);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html> 

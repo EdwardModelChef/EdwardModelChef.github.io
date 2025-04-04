@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://edwardmodelchef.github.io/sitemap.xml 

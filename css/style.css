@@ -1,6 +1,12 @@
-/* Global Styles */
+/**
+ * Main styles for Edward Hong Wang's academic website
+ * Most styles are now directly in index.html for faster loading
+ * This file contains supplementary styles for potential future use
+ */
+
+/* Global Styles - Fallback */
 :root {
-    --primary-color: #4285f4;
+    --primary-color: rgb(2, 90, 119);
     --dark-color: #333;
     --light-color: #f4f4f4;
     --danger-color: #dc3545;
@@ -150,7 +156,15 @@ footer {
     text-align: center;
 }
 
-/* Media Queries */
+/* ------- Utility Classes ------- */
+
+/* For elements that need high contrast visibility */
+.highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Responsive design fixes */
 @media (max-width: 768px) {
     #home {
         text-align: center;
@@ -159,21 +173,13 @@ footer {
     .profile-image {
         margin-bottom: 2rem;
     }
+    
+    .research-item {
+        padding: 15px !important;
+    }
 }
 
-/* Animation */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.animate-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Section Headers */
+/* Section Headers - Fallback */
 section h2 {
     position: relative;
     display: inline-block;

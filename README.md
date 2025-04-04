@@ -1,22 +1,30 @@
 # Edward Hong Wang - Personal Website
 
-This repository contains the code for my personal website hosted on GitHub Pages.
+This repository contains the code for my personal academic website hosted on GitHub Pages.
 
-## Setup Instructions
+## About
 
-1. **Repository Setup**
-   - Fork or clone this repository to your GitHub account
-   - Rename the repository to `EdwardModelChef.github.io` (replacing "EdwardModelChef" with your GitHub username if different)
+This website showcases my research, teaching, and projects in AI and machine learning, with a focus on:
+- Multi-modal LLMs and their applications
+- Neural implants and health monitoring systems
+- Contextualized subtitles for the deaf and hard-of-hearing
+- Vision transformers for video understanding
 
-2. **Customize Content**
-   - Update the profile picture: Replace `images/profile.jpg` with your photo
-   - Edit `index.html` to update your personal information
-   - Modify sections (About, Research, Publications, etc.) with your content
+## Features
 
-3. **Deployment**
-   - Push changes to your GitHub repository
-   - GitHub will automatically deploy your site at `https://EdwardModelChef.github.io`
-   - You can check the deployment status in the "Settings" > "Pages" section of your GitHub repository
+- Clean, responsive design
+- Smooth scrolling animations
+- Project galleries with video embeds
+- Mobile-friendly layout
+- Academic-focused presentation
+
+## Recent Updates
+
+- Added smooth section transitions and animations
+- Improved navigation with active section highlighting
+- Added contextualized subtitles project
+- Enhanced mobile responsiveness
+- Optimized favicon and visual elements
 
 ## Local Development
 
@@ -25,9 +33,10 @@ To run this website locally:
 1. Clone the repository to your computer
 2. Open the `index.html` file in a web browser
 
-## Credits
+## Deployment
 
-Design inspired by [jmiemirza.github.io](https://jmiemirza.github.io/)
+The website is automatically deployed through GitHub Pages and accessible at:
+https://EdwardModelChef.github.io
 
 ## License
 
